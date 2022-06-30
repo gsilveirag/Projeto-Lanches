@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LanchesMac.Context
 {
-    public class AppDpContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public AppDpContext (DbContextOptions<AppDpContext> options) : base(options)
+        public AppDbContext (DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
