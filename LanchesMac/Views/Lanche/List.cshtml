@@ -1,0 +1,15 @@
+﻿@model IEnumerable<LanchesMac.Models.Lanche>
+
+<div>
+	<h2>@ViewData["Titulo"]</h2>
+</div>
+<h3>@ViewData["Data"]</h3>
+
+@foreach(var lanche in Model)
+{
+	<div>
+		<h4>@lanche.Name</h4>
+		<p><img src="@lanche.ImagemUrl" /></p>
+		<h3>Preco: @lanche.Preco.ToString("c")</h3>
+	</div>
+}

@@ -29,7 +29,7 @@ namespace LanchesMac.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaId"), 1L, 1);
 
-                    b.Property<string>("CategoriaName")
+                    b.Property<string>("CategoriaNome")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -92,7 +92,7 @@ namespace LanchesMac.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Laches");
+                    b.ToTable("Lanches");
                 });
 
             modelBuilder.Entity("LanchesMac.Models.Lanche", b =>
