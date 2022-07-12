@@ -9471,11 +9471,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Estudos\\ASP.NET\\LanchesMac\\Projeto-Lanches\\LanchesMac\\LanchesMac.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\LanchesMac.csproj",
       "projectName": "LanchesMac",
-      "projectPath": "C:\\Users\\User\\Desktop\\Estudos\\ASP.NET\\LanchesMac\\Projeto-Lanches\\LanchesMac\\LanchesMac.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\LanchesMac.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Estudos\\ASP.NET\\LanchesMac\\Projeto-Lanches\\LanchesMac\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

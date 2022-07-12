@@ -21,9 +21,7 @@
         <li class="nav-item">
           <a class="nav-link active"  asp-controller="Home" asp-action="Index">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" asp-controller="Lanche" asp-action="List">Lanches</a>
-        </li>
+        @await Component.InvokeAsync("CategoriaMenu")
         <li class="nav-item">
           <a class="nav-link" asp-controller="Contato" asp-action="Index">Contato</a>
         </li>
@@ -32,10 +30,6 @@
           <a class="nav-link disabled">Compras</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
       @await Component.InvokeAsync("CarrinhoCompraResumo")
     </div>
   </div>
