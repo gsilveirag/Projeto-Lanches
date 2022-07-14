@@ -3,6 +3,15 @@
 <div class="col-sm-auto col-md-auto col-lg-auto">
 		<p><img src="@Model.ImagemUrl" class="img-fluid"/></p>
 		<h6>Preco: @Model.Preco.ToString("c")</h6>
-		<h5>@Model.Name</h5>
+		
+		<a asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">@Model.Name</a>
+
 		<p>@Model.DescricaoCurta</p>
+
+		<div>
+			<p class="button">
+				<a class="btn btn-primary" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra"
+				asp-route-LancheId="@Model.LancheId">Incluir no Carrinho</a>
+			</p>
+		</div>
 	</div>

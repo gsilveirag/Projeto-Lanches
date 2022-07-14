@@ -12,9 +12,13 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(connectionString));
 
+
+
 builder.Services.AddTransient<ILancheRepository, LancheRepository>(); //sempre é criada uma nova instância cada vez que for necessário,
                                                                       //independentede da requisição,
                                                                       //basicamente new XXX cada vez que for necessário.
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
+
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); //criada uma única instância para todas requisições. Em outras palavras,

@@ -18,7 +18,7 @@ namespace LanchesMac.Controllers
 
         public IActionResult Index()
         {
-            var itens = _carrinhoCompra.GetCarrinhoCompraItems();
+            var itens = _carrinhoCompra.GetCarrinhoCompraItens();
             _carrinhoCompra.CarrinhoCompraItems = itens;
 
             var carrinhoCompraVM = new CarrinhoCompraViewModel
@@ -33,7 +33,8 @@ namespace LanchesMac.Controllers
         public IActionResult AdicionarItemNoCarrinhoCompra(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(p => p.LancheId == lancheId);
-            if (lancheSelecionado == null)
+
+            if (lancheSelecionado != null)
             {
                 _carrinhoCompra.AdicionarAoCarrinho(lancheSelecionado);
             }
@@ -43,7 +44,8 @@ namespace LanchesMac.Controllers
         public IActionResult RemoverItemDoCarrinhoCompra(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(p => p.LancheId == lancheId);
-            if (lancheSelecionado == null)
+
+            if (lancheSelecionado != null)
             {
                 _carrinhoCompra.RemoverDoCarrinho(lancheSelecionado);
             }
