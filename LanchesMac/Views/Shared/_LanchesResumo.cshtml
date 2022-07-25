@@ -4,7 +4,7 @@
 		<p><img src="@Model.ImagemUrl" class="img-fluid"/></p>
 		<h6>Preco: @Model.Preco.ToString("c")</h6>
 		
-		<a asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">@Model.Name</a>
+		<a asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">@Model.Nome</a>
 
 		<p>@Model.DescricaoCurta</p>
 

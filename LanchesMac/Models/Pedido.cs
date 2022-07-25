@@ -7,44 +7,44 @@ namespace LanchesMac.Models
     {
         public int PedidoId { get; set; }
 
-        [Required(ErrorMessage = "Informe o nome.")]
+        [Required(ErrorMessage = "Informe o nome")]
         [StringLength(50)]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "Informe o Sobrenome.")]
+
+        [Required(ErrorMessage = "Informe o sobrenome")]
         [StringLength(50)]
         public string Sobrenome { get; set; }
 
-        [Required(ErrorMessage = "Informe o seu endereco.")]
+        [Required(ErrorMessage = "Informe o seu endereço")]
         [StringLength(100)]
-        [Display(Name = "Endereco")]
+        [Display(Name = "Endereço")]
         public string Endereco1 { get; set; }
 
-        [Required(ErrorMessage = "Informe o complemento do seu endereco.")]
         [StringLength(100)]
         [Display(Name = "Complemento")]
         public string Endereco2 { get; set; }
 
-        [Required(ErrorMessage = "Informe o seu CEP.")]
-        [StringLength(10)]
-        [Display(Name = "Cep")]
-        public int Cep { get; set; }
+        [Required(ErrorMessage = "Informe o seu CEP")]
+        [Display(Name = "CEP")]
+        [StringLength(10, MinimumLength = 8)]
+        public string Cep { get; set; }
 
         [StringLength(10)]
         public string Estado { get; set; }
 
-        [StringLength(30)]
-        public int Cidade { get; set; }
+        [StringLength(50)]
+        public string Cidade { get; set; }
 
-        [Required(ErrorMessage = "Informe o seu telefone.")]
+        [Required(ErrorMessage = "Informe o seu telefone")]
         [StringLength(25)]
         [DataType(DataType.PhoneNumber)]
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
 
-        [Required(ErrorMessage = "Informe o seu email.")]
+        [Required(ErrorMessage = "Informe o email.")]
         [StringLength(50)]
         [DataType(DataType.EmailAddress)]
-        [RegularExpression(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$",
-        ErrorMessage = "O email nao possui um formato correto.")]
+        [RegularExpression(@"(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|""(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*"")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])",
+            ErrorMessage = "O email não possui um formato correto")]
         public string Email { get; set; }
 
         [ScaffoldColumn(false)]
@@ -57,16 +57,16 @@ namespace LanchesMac.Models
         public int TotalItensPedido { get; set; }
 
         [Display(Name = "Data do Pedido")]
-        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true )]
         [DataType(DataType.Text)]
+        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime PedidoEnviado { get; set; }
 
         [Display(Name = "Data Envio Pedido")]
-        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Text)]
-        public DateTime? PedidoEntregeEm { get; set; }
+        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
+        public DateTime? PedidoEntregueEm { get; set; }
 
-        public List<PedidoDetalhe> PedidoItens { get; set; }
+        public List<PedidoDetalhe>? PedidoItens { get; set; }
 
     }
 }
