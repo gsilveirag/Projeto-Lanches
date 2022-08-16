@@ -3,6 +3,7 @@ using LanchesMac.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using LanchesMac.Repositories;
 using LanchesMac.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(connectionString));
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()  // Identificacao dos usuarios
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 
 builder.Services.AddTransient<ILancheRepository, LancheRepository>(); //sempre é criada uma nova instância cada vez que for necessário,
@@ -54,6 +58,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

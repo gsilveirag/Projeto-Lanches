@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tT2UwxV4gKaofSAjQEdNJajMbxvL7/ja4SOr1vuHyG4=",
+  "Hash": "QwC9KtSOkujocLX/CUt5EYW9urrY1P2jI3MtSyOnbKo=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\lixeira.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\wwwroot\\imagens\\Login.png",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "imagens/Login.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\Login.png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Estudos\\Git\\Projeto-Lanches\\LanchesMac\\wwwroot\\imagens\\phone-app-icon.png",
